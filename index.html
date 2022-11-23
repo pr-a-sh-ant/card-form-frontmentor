@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="script.js"></script>
+
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <section class="card-detail">
+      <div class="cards-section">
+        <div class="card-container">
+          <div class="card-front">
+            <div class="card-front-img"></div>
+            <svg
+              class="card-logo"
+              width="84"
+              height="47"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <ellipse
+                cx="23.478"
+                cy="23.5"
+                rx="23.478"
+                ry="23.5"
+                fill="#fff"
+              />
+              <path
+                d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z"
+                stroke="#fff"
+              />
+            </svg>
+            <span class="card-number">0000 0000 0000 0000 </span>
+            <div class="cardholder">
+              <p class="cardholder-name">Jane Appleseed</p>
+              <span class="expiery-date">00/00</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card-back">
+            <span class="cvc-number">000</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-form-div">
+        <div class="form-container container">
+          <form class="form">
+            <div class="card-form">
+              <label for="fname">Cardholder name</label>
+              <input
+                class="field card-name"
+                type="text"
+                id="fname"
+                name="fname"
+                placeholder="e.g. Jane Appleseed"
+              />
+              <span class="error">Cant be blank</span>
+            </div>
+            <div class="card-form">
+              <label for="lname">Card number</label>
+              <input
+                class="field card-num"
+                type="text"
+                id="lname"
+                name="lname"
+                placeholder="e.g. 1234 5678 9123 0000"
+              />
+              <span class="error">Wrong format, numbers only</span>
+            </div>
+            <div class="exp-cvc">
+              <div class="exp card-form">
+                <label for="lname">Exp.date(mm/yy)</label>
+                <div class="exp-date">
+                  <input
+                    type="text"
+                    class="field exp-month"
+                    id="lname"
+                    name="lname"
+                    placeholder="MM"
+                  />
+                  <input
+                    type="text"
+                    class="field exp-year"
+                    id="lname"
+                    name="lname"
+                    placeholder="YY"
+                  />
+                </div>
+                <span class="error">Cant be blank</span>
+              </div>
+              <div class="card-form">
+                <label for="lname">cvc</label>
+                <input
+                  class="field card-cvc"
+                  type="text"
+                  id="lname"
+                  name="lname"
+                  placeholder="e.g. 123"
+                />
+                <span class="error">Cant be blank</span>
+              </div>
+            </div>
+          </form>
+          <button class="btn-confirm confirm-button">Confirm</button>
+        </div>
+        <div class="hidden confirmed-container container">
+          <div class="flex-column">
+            <div>
+              <svg
+                width="80"
+                height="80"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="40" cy="40" r="40" fill="url(#a)" />
+                <path
+                  d="M28 39.92 36.08 48l16-16"
+                  stroke="#fff"
+                  stroke-width="3"
+                />
+                <defs>
+                  <linearGradient
+                    id="a"
+                    x1="-23.014"
+                    y1="11.507"
+                    x2="0"
+                    y2="91.507"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#6348FE" />
+                    <stop offset="1" stop-color="#610595" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div><span class="confirm-text">Thank you!</span></div>
+            <div>
+              <p class="confirm-context">We've added your card details</p>
+            </div>
+            <button class="continue-btn">Continue</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
